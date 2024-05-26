@@ -1,7 +1,8 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Persona } from "../../persona/entities/persona.entity";
+import { Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-export class Categoria{
+export class User{
     @PrimaryGeneratedColumn()
     id: number; 
 
@@ -9,7 +10,13 @@ export class Categoria{
     nombre:string;
 
     @Column()
+    email:string;
+
+    @Column()
     detalle:string;
+
+    @OneToOne(()=>Persona, persona=>persona.user,{cascade:true})
+    persona:Persona;
 
 }
 
