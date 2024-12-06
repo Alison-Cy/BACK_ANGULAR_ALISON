@@ -1,25 +1,27 @@
+###Registro de usuario
 POST http://127.0.0.1:3000/auth/register
 Content-Type: application/json
 
 {
-   "name":"valeria",
-    "email": "valeria@gmail.com",
-    "password":"200101"
+    "name":"alis",
+    "email":"alison@gmail.com",
+    "password":"876543" 
+    
 }
 
-## login sin conexion a BD
+
+### login sin conexion a BDD
 
 POST http://127.0.0.1:3000/auth/login
 Content-Type: application/json
 
 {
+    "name":"alis2",
+    "email":"alison@gmail.com",
+    "password":"876543"
     
-   "name":"alison",
-    "email": "alison@gmail.com",
-    "password":"20010109"
-
 }
 
 ### users
 GET http://127.0.0.1:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJL
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTc0NTIzMjEsImV4cCI6MTcxNzQ1MzIwMX0.bvwqyPVCYrZ60GGIKuz8YU1XVxk8i24zx74twOmQ1hk

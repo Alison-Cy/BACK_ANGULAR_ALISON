@@ -1,13 +1,11 @@
 import { IsEmail, IsNotEmpty, MaxLength, MinLength } from "class-validator";
-import { User } from "src/modules/users/entities/user.entity";
-
+import { User } from "../interfaces/user.interfac";
+//import { ApiProperty } from "@nestjs/swagger";
 export class LoginAuthDto implements User{
-    id: number;
-    name: string;
-    mail: string;
     @IsNotEmpty()
     @IsEmail()
     email: string;
+
     @MinLength(6)
     @MaxLength(25)
     @IsNotEmpty()

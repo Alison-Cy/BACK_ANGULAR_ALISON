@@ -11,13 +11,13 @@ export class Pedido {
     fecha:string;
 
     @Column()
-    estadp:number;
+    estado:number;
 
     @Column()
     observaciones:string;
 
     @ManyToOne(()=>Cliente)
-    cliente:Cliente
+    cliente:Cliente;
 
     @OneToMany(()=>PedidoProducto,pedprod=>pedprod.pedido)
     pedidoProducto: PedidoProducto[];

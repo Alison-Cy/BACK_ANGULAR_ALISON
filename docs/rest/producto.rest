@@ -1,0 +1,17 @@
+### Listar productos
+GET  http://localhost:3000/producto
+
+### Crear producto
+POST http://localhost:3000/producto
+Content-Type: :application/json
+
+{
+    "nombre":"impresora",
+    "precio": "500.00",
+    "stock":12,
+    "categoriaId":1
+}
+
+### Busqueda por nombre
+GET http://localhost:3000/producto/back?page=3
+
